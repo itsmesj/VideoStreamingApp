@@ -1,0 +1,45 @@
+.user-starter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  }
+  
+  .user-starter-content {
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    animation: slideUp 1s ease-in-out forwards; /* Slide-up animation */
+  }
+  
+  .user-starter-title {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .user-starter-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

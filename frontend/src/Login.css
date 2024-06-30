@@ -1,0 +1,31 @@
+/* Common styles for both Login and Signup components */
+
+.login-container,
+.signup-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 100px auto;
+  background: #000;
+    color: #fff;
+}
+
+input.form-control,
+select.form-control {
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+}
+
+button {
+  margin-top: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .login-container,
+  .signup-container {
+    padding: 1rem;
+    margin-top: 120px;
+    background: #000;
+    color: #ccc;
+  }
+}

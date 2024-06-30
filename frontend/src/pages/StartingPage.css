@@ -1,0 +1,83 @@
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-color: #1a1a2e; /* Dark blue background */
+  transition: left 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition */
+  width: 250px; /* Ensure sidebar has a fixed width */
+}
+@media (max-width: 767.98px) {
+  .sidebar {
+    left: -250px; /* Hide sidebar initially on small screens */
+  }
+  .sidebar.visible {
+    left: 0; /* Show sidebar when visible class is added */
+  }
+}
+.sidebar:hover {
+  background-color: #16213e; /* Slightly lighter dark blue on hover */
+}
+.sidebar .nav-link {
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #e94560; /* Vibrant red-pink text color */
+  font-size: 1.1em;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+}
+.sidebar .nav-link:hover {
+  background-color: #1abc9c; /* Darker blue background on hover */
+  color: #f0f0f0; /* Light text color on hover */
+  border-radius: 5px;
+}
+.sidebar-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #e94560; /* Vibrant red-pink text color */
+  margin-bottom: 20px;
+}
+.sidebar .nav-item {
+  margin-bottom: 10px;
+}
+.main-content {
+  margin-left: 0; /* Reset margin for small screens */
+  width: 100%;
+  padding: 20px;
+  background: #f0f0f0;
+}
+@media (min-width: 768px) {
+  .main-content {
+    margin-left: 250px; /* Adjust according to sidebar width */
+    width: calc(100% - 250px);
+  }
+}
+@media (min-width: 992px) {
+  .main-content {
+    margin-left: 250px; /* Adjust according to sidebar width */
+    width: calc(100% - 250px);
+  }
+}
+.component-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menu-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  font-size: 1.5em;
+  background-color: #12121f;
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+}

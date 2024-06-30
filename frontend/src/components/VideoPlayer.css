@@ -1,0 +1,49 @@
+/* VideoPlayer.css */
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  width: 100%;
+  max-width: 850px;
+  margin: 40px auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .video-container {
+    padding: 10px;
+  }
+
+  video {
+    margin-top: 10px;
+  }
+}
+
+video::-webkit-media-controls {
+  color: white;
+  border-radius: 8px;
+}
+
+video::-webkit-media-controls-play-button {
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display {
+  color: white;
+}
